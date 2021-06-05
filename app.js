@@ -52,7 +52,7 @@ app.use(passport.session());
 app.use('/',pageRouter);
 app.use('/auth',authRouter);
 app.use('/post',postRouter);
-app.use('user',userRouter);
+app.use('/user',userRouter);
 
 app.use((req,res,next)=>{
     const error=new Error(`${req.method} ${req.url} 라우터가 없습니다.`);
